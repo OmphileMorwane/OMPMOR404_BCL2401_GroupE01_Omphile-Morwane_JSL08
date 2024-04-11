@@ -1,10 +1,14 @@
+//class representing branches
 class BankBranch {
         constructor(branchInfo) {
+                //Check if an instance of BankBranch already exists
             if (typeof BankBranch.bankBranchInstance === 'object') {
+                //If an instance exists, return it to ensure one intance is created
                 return BankBranch.bankBranchInstance;
             }
     
             this.branchInfo = branchInfo;
+            //Stored this instance as the singleton instance
             BankBranch.bankBranchInstance = this;
             return this;
         }
@@ -13,9 +17,20 @@ class BankBranch {
             return this.branchInfo;
         }
     }
+//Instaces of BankBranch representing different bank branches
+const branchA = new BankBranch("Johannesburg");
+const branchB = new BankBranch("Sandton");
+
+console.log(branchA === branchB); // true, they are referring to the same instance
+
+console.log(branchA.getBranchInfo()); // "Branch A Information"
+console.log(branchB.getBranchInfo()); // "Branch B Information"
 
 
-// This one will be a little tricky. So check out this overview first: https://www.youtube.com/watch?v=sJ-c3BA-Ypo
+
+
+
+// This one will be a little tricky. So check out this overview first: 
 
 // 1. Create a variable to store the singleton instance of the bank branch. "bankBranchInstance"
 
