@@ -1,3 +1,4 @@
+let bankBranchInstance = null; //explicitely defined the variable as null
 //class representing branches
 class BankBranch {
         constructor(branchInfo) {
