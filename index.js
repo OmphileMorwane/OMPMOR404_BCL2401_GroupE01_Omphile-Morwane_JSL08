@@ -1,4 +1,6 @@
-let bankBranchInstance = null; //explicitely defined the variable as null
+//Solution
+
+let bankBranchInstance = null; //explicitly defined the variable as null
 //class representing branches
 class BankBranch {
         constructor(branchInfo) {
@@ -30,6 +32,11 @@ console.log(branchB.getBranchInfo()); // "Branch B Information"
 
 
 
+
+
+
+
+//Questions:
 
 // This one will be a little tricky. So check out this overview first: 
 
